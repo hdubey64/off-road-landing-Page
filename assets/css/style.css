@@ -73,25 +73,25 @@ nav {
    font-size: 1.5rem;
    padding-right: 5px;
 }
-.content-left {
+.content1 {
    color: white;
    padding: 50px;
    align-items: center;
 }
-.content-left h3 {
+.content1 h3 {
    /* display: flex;
    justify-content: flex-start; */
    font-size: 2rem;
    font-weight: 600;
    margin-bottom: -15px;
 }
-.content-left h1 {
+.content1 h1 {
    display: flex;
    justify-content: center;
    font-size: 5rem;
    font-weight: 600;
 }
-.content-left h4 {
+.content1 h4 {
    display: flex;
    justify-content: flex-end;
    font-size: 2rem;
@@ -113,4 +113,15 @@ nav {
    width: 60%;
    display: flex;
    margin: 15px 15px;
+}
+.content2 {
+   color: white;
+   padding: 50px;
+   align-items: center;
+}
+.glass {
+   backdrop-filter: saturate(90%) blur(40px);
+   object-fit: cover;
+   padding: 15px 0;
+   opacity: 0.9;
 }
