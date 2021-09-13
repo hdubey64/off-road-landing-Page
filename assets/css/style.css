@@ -16,14 +16,13 @@ body {
 }
 
 section {
-   margin: 25px 0;
-   padding: 25px 40px;
+   margin: 15px 0;
+   padding: 15px 40px;
 }
 header {
    backdrop-filter: saturate(90%) blur(40px);
    object-fit: cover;
    padding: 15px 0;
-   opacity: 0.9;
 }
 nav {
    display: flex;
@@ -43,7 +42,7 @@ nav {
    display: flex;
    justify-content: space-around;
 
-   width: 70%;
+   width: 60%;
    margin-bottom: 0;
 }
 .nav-links li {
@@ -52,12 +51,12 @@ nav {
 .nav-links a {
    text-decoration: none;
    color: white;
-   font-size: 1.2rem;
+   font-size: 1rem;
 }
 
 .search {
    background: transparent;
-   font-size: 1.2rem;
+   font-size: 1rem;
    color: white;
    border: none;
 }
@@ -66,11 +65,10 @@ nav {
 }
 ::placeholder {
    color: white;
-   padding-left: 5px;
 }
 .fas {
    color: white;
-   font-size: 1.5rem;
+   font-size: 1.2rem;
    padding-right: 5px;
 }
 .content1 {
@@ -79,8 +77,6 @@ nav {
    align-items: center;
 }
 .content1 h3 {
-   /* display: flex;
-   justify-content: flex-start; */
    font-size: 2rem;
    font-weight: 600;
    margin-bottom: -15px;
@@ -113,15 +109,84 @@ nav {
    width: 60%;
    display: flex;
    margin: 15px 15px;
+   font-weight: 300;
 }
 .content2 {
    color: white;
-   padding: 50px;
+   padding: 40px 30px;
    align-items: center;
+   display: flex;
+   justify-content: center;
 }
 .glass {
-   backdrop-filter: saturate(90%) blur(40px);
+   backdrop-filter: saturate(100%) blur(60px);
    object-fit: cover;
-   padding: 15px 0;
-   opacity: 0.9;
+   padding: 40px 30px;
+
+   width: 70%;
+   border-radius: 10px;
+}
+.glass-head {
+   display: flex;
+   align-items: center;
+}
+.glass-head h1 {
+   font-size: 1.7rem;
+}
+.box {
+   height: 2px;
+   width: 100%;
+   background-color: white;
+   margin-right: 10px;
+}
+.box1 {
+   height: 2px;
+   width: 100%;
+   background-color: white;
+   margin-left: 10px;
+}
+.account {
+   display: flex;
+   justify-content: center;
+   font-weight: 300;
+}
+.form-contant {
+   margin: 50px 0;
+}
+.form-contant ::placeholder {
+   font-size: 1rem;
+   font-weight: 300;
+}
+.key {
+   display: flex;
+   justify-content: center;
+}
+.submit {
+   border: 1px solid #764e2b;
+   border-radius: 5px;
+   background: #764e2b;
+   padding: 8px 25px;
+   color: white;
+}
+.footer-glass {
+   backdrop-filter: saturate(100%) blur(60px);
+   object-fit: cover;
+   padding: 40px 30px;
+
+   border-radius: 10px;
+}
+footer {
+   margin: 15px 0;
+   padding: 15px 40px;
+}
+.footer-content {
+   margin: 0 30px;
+}
+.footer-title h1 {
+   font-size: 1.5rem;
+   color: white;
+}
+.footer-content p {
+   color: white;
+   padding-left: 30px;
 }
