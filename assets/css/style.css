@@ -11,8 +11,10 @@ body {
    font-family: "Poppins", sans-serif;
    background-image: url(/assets/images/Image\ 1.jpg);
    object-fit: cover;
-   background-size: 100%;
+   background-size: cover;
+   background-position: center center;
    background-repeat: no-repeat;
+   /* background-attachment: fixed; */
 }
 
 section {
@@ -41,9 +43,9 @@ nav {
 .nav-links {
    display: flex;
    justify-content: space-around;
-
    width: 60%;
    margin-bottom: 0;
+   padding-left: 50px;
 }
 .nav-links li {
    list-style: none;
@@ -52,6 +54,9 @@ nav {
    text-decoration: none;
    color: white;
    font-size: 1rem;
+   position: relative;
+   width: max-content;
+   margin: 0 auto;
 }
 
 .search {
@@ -59,17 +64,27 @@ nav {
    font-size: 1rem;
    color: white;
    border: none;
+   position: relative;
 }
 .bottom-border {
+   display: flex;
    border-bottom: 3px solid white;
+   /* justify-content: space-around; */
 }
+.bottom-border::after {
+   contain: "<i class=" fas fa-search ab icon ">";
+   height: 20px;
+   color: white;
+   top: 20px;
+}
+
 ::placeholder {
    color: white;
 }
 .fas {
    color: white;
    font-size: 1.2rem;
-   padding-right: 5px;
+   /* padding-right: 5px; */
 }
 .content1 {
    color: white;
@@ -153,6 +168,9 @@ nav {
 .form-contant {
    margin: 50px 0;
 }
+.bottom-border1 {
+   border-bottom: 3px solid white;
+}
 .form-contant ::placeholder {
    font-size: 1rem;
    font-weight: 300;
@@ -189,4 +207,69 @@ footer {
 .footer-content p {
    color: white;
    padding-left: 30px;
+   font-weight: 300;
+}
+.burger {
+   display: none;
+   cursor: pointer;
+}
+.burger div {
+   width: 25px;
+   height: 2px;
+   background-color: white;
+   margin: 5px;
+   transition: all 0.3s ease;
+}
+
+@media screen and (max-width: 993px) {
+   .nav-links {
+      background-color: #764e2b;
+      backdrop-filter: saturate(100%) blur(60px);
+      position: absolute;
+      left: 0px;
+      height: 50vh;
+      top: 9.9vh;
+      display: flex;
+      flex-direction: column;
+
+      width: 50%;
+      transform: translateX(-100%);
+      transition: transform 0.5s ease-in;
+   }
+
+   .burger {
+      display: block;
+   }
+   .bottom-border {
+      width: 27vh;
+   }
+
+   .icon {
+      position: relative;
+      padding-left: -100px;
+   }
+}
+
+.nav-active {
+   transform: translateX(0%);
+}
+@keyframes navLinkFade {
+   from {
+      opacity: 0;
+      transform: translateX(50px);
+   }
+   to {
+      opacity: 1;
+      transform: translateX(0px);
+   }
+}
+
+.toggle .line1 {
+   transform: rotate(-45deg) translate(-5px, 5px);
+}
+.toggle .line2 {
+   opacity: 0;
+}
+.toggle .line3 {
+   transform: rotate(45deg) translate(-5px, -5px);
 }
