@@ -23,8 +23,10 @@ section {
 }
 header {
    backdrop-filter: saturate(90%) blur(40px);
-   object-fit: cover;
    padding: 15px 0;
+   position: sticky;
+   top: 0;
+   z-index: 100;
 }
 nav {
    display: flex;
@@ -64,18 +66,11 @@ nav {
    font-size: 1rem;
    color: white;
    border: none;
-   position: relative;
 }
 .bottom-border {
    display: flex;
    border-bottom: 3px solid white;
-   /* justify-content: space-around; */
-}
-.bottom-border::after {
-   contain: "<i class=" fas fa-search ab icon ">";
-   height: 20px;
-   color: white;
-   top: 20px;
+   position: relative;
 }
 
 ::placeholder {
@@ -116,6 +111,7 @@ nav {
 .video-contant h1 {
    display: flex;
    font-size: 1rem;
+
    justify-content: flex-start;
    margin: 15px 15px;
 }
@@ -137,7 +133,6 @@ nav {
    backdrop-filter: saturate(100%) blur(60px);
    object-fit: cover;
    padding: 40px 30px;
-
    width: 70%;
    border-radius: 10px;
 }
@@ -241,7 +236,11 @@ footer {
       display: block;
    }
    .bottom-border {
-      width: 27vh;
+      /* width: 27vh; */
+      width: 50%;
+   }
+   .fas {
+      position: relative;
    }
 
    .icon {
@@ -272,4 +271,73 @@ footer {
 }
 .toggle .line3 {
    transform: rotate(45deg) translate(-5px, -5px);
+}
+@media screen and (max-width: 753px) {
+   .player {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+   }
+   .glass {
+      width: 100%;
+   }
+   .content1 > h1 {
+      font-size: 3.5rem;
+   }
+   .content1 > h3 {
+      font-size: 1.8rem;
+   }
+   .content1 > h4 {
+      font-size: 1.8rem;
+   }
+   .content2 {
+      padding: 10px;
+   }
+}
+@media screen and (max-width: 576px) {
+   .content1 > h1 {
+      font-size: 3rem;
+   }
+   .content1 > h3 {
+      margin-bottom: -10px;
+      margin-left: -35px;
+      font-size: 1.5rem;
+   }
+   .content1 > h4 {
+      font-size: 1.5rem;
+      margin-top: -8px;
+      margin-right: -35px;
+   }
+   .play {
+      display: flex;
+      flex-direction: column;
+   }
+   .video-contant h1 {
+      margin: 10px 0;
+   }
+   .video-contant p {
+      width: 100%;
+      display: flex;
+      margin: 0;
+      font-weight: 300;
+   }
+   .footer-content {
+      padding: 0;
+      margin: 5px 0;
+      margin-left: 5px;
+   }
+   .footer-glass {
+      padding: 30px;
+   }
+   .content2 {
+      padding: 20px 10px;
+   }
+   section {
+      padding: 30px 8px;
+   }
+
+   footer {
+      padding: 20px 10px;
+   }
 }
