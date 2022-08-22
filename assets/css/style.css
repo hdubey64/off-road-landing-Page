@@ -218,8 +218,9 @@ footer {
 
 @media screen and (max-width: 993px) {
    .nav-links {
-      background-color: #764e2b;
+      background-color: white;
       backdrop-filter: saturate(100%) blur(60px);
+      opacity: 20px;
       position: absolute;
       left: 0px;
       height: 50vh;
@@ -227,9 +228,13 @@ footer {
       display: flex;
       flex-direction: column;
 
-      width: 50%;
+      width: 30%;
       transform: translateX(-100%);
       transition: transform 0.5s ease-in;
+   }
+
+   .nav-links a {
+      color: #764e2b;
    }
 
    .burger {
